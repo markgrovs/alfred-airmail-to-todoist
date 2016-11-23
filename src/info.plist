@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>bundleid</key>
-	<string>us.markgroves.airmailtodoist</string>
+	<string>us.markgroves.airmail-to-doist</string>
 	<key>category</key>
 	<string>Productivity</string>
 	<key>connections</key>
@@ -45,11 +45,11 @@
 	<key>createdby</key>
 	<string>Mark Groves</string>
 	<key>description</key>
-	<string>Simple way to create a task in Todoist based on a mail in Airmail 2</string>
+	<string>Simple way to create a task in Todoist based on a mail in Airmail 3</string>
 	<key>disabled</key>
 	<false/>
 	<key>name</key>
-	<string>Airmail-to-Todoist</string>
+	<string>Airmail-to-Todoist Dev</string>
 	<key>objects</key>
 	<array>
 		<dict>
