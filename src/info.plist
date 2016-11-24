@@ -17,6 +17,8 @@
 				<integer>0</integer>
 				<key>modifiersubtext</key>
 				<string></string>
+				<key>vitoclose</key>
+				<false/>
 			</dict>
 		</array>
 		<key>59DDAD82-6166-44BD-9DA5-E897A8E67261</key>
@@ -28,6 +30,8 @@
 				<integer>0</integer>
 				<key>modifiersubtext</key>
 				<string></string>
+				<key>vitoclose</key>
+				<false/>
 			</dict>
 		</array>
 		<key>FFF92AAB-3640-4E69-8A95-D0B99310FF3B</key>
@@ -39,6 +43,8 @@
 				<integer>0</integer>
 				<key>modifiersubtext</key>
 				<string></string>
+				<key>vitoclose</key>
+				<false/>
 			</dict>
 		</array>
 	</dict>
@@ -59,11 +65,7 @@
 				<false/>
 				<key>onlyshowifquerypopulated</key>
 				<false/>
-				<key>output</key>
-				<integer>0</integer>
 				<key>removeextension</key>
-				<false/>
-				<key>sticky</key>
 				<false/>
 				<key>text</key>
 				<string>{query}</string>
@@ -75,7 +77,7 @@
 			<key>uid</key>
 			<string>CBDF6D7F-F23B-4094-AD35-4F0558069274</string>
 			<key>version</key>
-			<integer>0</integer>
+			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -83,7 +85,9 @@
 				<key>argumenttype</key>
 				<integer>0</integer>
 				<key>keyword</key>
-				<string>mt</string>
+				<string>dmt</string>
+				<key>subtext</key>
+				<string></string>
 				<key>text</key>
 				<string>Airmail to Todoist</string>
 				<key>withspace</key>
@@ -94,7 +98,7 @@
 			<key>uid</key>
 			<string>03A427D2-EBDD-4D24-90A1-3B5B003FCD05</string>
 			<key>version</key>
-			<integer>0</integer>
+			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -103,6 +107,10 @@
 				<integer>0</integer>
 				<key>argument</key>
 				<integer>0</integer>
+				<key>focusedappvariable</key>
+				<false/>
+				<key>focusedappvariablename</key>
+				<string></string>
 				<key>hotkey</key>
 				<integer>17</integer>
 				<key>hotmod</key>
@@ -125,7 +133,7 @@
 			<key>uid</key>
 			<string>FFF92AAB-3640-4E69-8A95-D0B99310FF3B</string>
 			<key>version</key>
-			<integer>1</integer>
+			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -136,6 +144,10 @@
 				<integer>102</integer>
 				<key>script</key>
 				<string>python airmail-to-todoist.py "{query}"</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
 				<key>type</key>
 				<integer>0</integer>
 			</dict>
@@ -144,7 +156,7 @@
 			<key>uid</key>
 			<string>59DDAD82-6166-44BD-9DA5-E897A8E67261</string>
 			<key>version</key>
-			<integer>0</integer>
+			<integer>2</integer>
 		</dict>
 	</array>
 	<key>readme</key>
@@ -153,25 +165,47 @@
 	<dict>
 		<key>03A427D2-EBDD-4D24-90A1-3B5B003FCD05</key>
 		<dict>
+			<key>xpos</key>
+			<integer>300</integer>
 			<key>ypos</key>
 			<real>20</real>
 		</dict>
 		<key>59DDAD82-6166-44BD-9DA5-E897A8E67261</key>
 		<dict>
+			<key>xpos</key>
+			<integer>500</integer>
 			<key>ypos</key>
 			<real>120</real>
 		</dict>
 		<key>CBDF6D7F-F23B-4094-AD35-4F0558069274</key>
 		<dict>
+			<key>xpos</key>
+			<integer>700</integer>
 			<key>ypos</key>
 			<real>10</real>
 		</dict>
 		<key>FFF92AAB-3640-4E69-8A95-D0B99310FF3B</key>
 		<dict>
+			<key>xpos</key>
+			<integer>100</integer>
 			<key>ypos</key>
 			<real>40</real>
 		</dict>
 	</dict>
+	<key>variables</key>
+	<dict>
+		<key>API_KEY</key>
+		<string>a01aa1a0314d222ae901741cbed2510425913f98</string>
+		<key>INBOX_ID</key>
+		<string>131035310</string>
+	</dict>
+	<key>variablesdontexport</key>
+	<array>
+		<string>API_KEY</string>
+		<string>INBOX_ID</string>
+	</array>
+	<key>version</key>
+	<string>1.0.0</string>
 	<key>webaddress</key>
 	<string>http://markgroves.us</string>
 </dict>

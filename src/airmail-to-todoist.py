@@ -6,14 +6,18 @@
 # encoding: utf8
 
 import sys
+import os
+import todoist
+from Foundation import *
+from ScriptingBridge import *
 
-from workflow import Workflow
+from workflow import Workflow3
 
 LOG = None
 
-API_KEY = 'a01aa1a0314d222ae901741cbed2510425913f98'
+API_KEY = None
 EMAIL_LABELID = '[151545]'
-INBOX_ID = 131035310
+INBOX_ID = None
 
 
 def create_task(content):
@@ -21,7 +25,9 @@ def create_task(content):
 
     """
     todo = todoist.TodoistAPI(API_KEY)
-    task = todo.items.add(content, INBOX_ID, labels=EMAIL_LABELID)
+
+    # task = todo.items.add(content, INBOX_ID, labels=EMAIL_LABELID)
+    task = todo.items.add(content, 1)
     # print task
 
     airmail = SBApplication.applicationWithBundleIdentifier_("it.bloop.airmail2")
@@ -35,8 +41,9 @@ def create_task(content):
 
 
 def main(wf):
-    import todoist
-    
+    """
+
+    """
     if len(wf.args):
         query = wf.args[0]
         print query
@@ -44,12 +51,15 @@ def main(wf):
         query = None
         print query
 
-
     create_task(query)
 
 
 
 if __name__ == u"__main__":
-    wf = Workflow(libraries=['./lib'])
+    wf = Workflow3(libraries=[os.path.join(os.path.dirname(__file__), 'lib')])
     LOG = wf.logger
+    
+    API_KEY = os.environ['API_KEY']
+    INBOX_ID = os.environ['INBOX_ID']
+    LOG.debug(INBOX_ID)
     sys.exit(wf.run(main))
