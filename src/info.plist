@@ -55,7 +55,7 @@
 	<key>disabled</key>
 	<false/>
 	<key>name</key>
-	<string>Airmail-to-Todoist Dev</string>
+	<string>Airmail-to-Todoist</string>
 	<key>objects</key>
 	<array>
 		<dict>
@@ -85,7 +85,7 @@
 				<key>argumenttype</key>
 				<integer>0</integer>
 				<key>keyword</key>
-				<string>dmt</string>
+				<string>mt</string>
 				<key>subtext</key>
 				<string></string>
 				<key>text</key>
