@@ -11,6 +11,8 @@ from workflow import Workflow3
 from Foundation import *
 from ScriptingBridge import *
 
+__version__ = '1.0.0'
+
 LOG = None
 API_KEY = None
 
@@ -52,7 +54,17 @@ def main(wf):
     create_task(query)
 
 if __name__ == u"__main__":
-    wf = Workflow3(libraries=['./lib'])
+    wf = Workflow3(libraries=['./lib'], update_settings={
+        # Github repo
+        'github_slug': 'markgrovs/alfred-airmail-to-todoist',
+        'version': __version__,
+        'frequency': 7
+    })
+
+    if wf.update_available:
+        # Download new version and tell Alfred to install it
+        wf.start_update()
+
     import todoist
     LOG = wf.logger
     API_KEY = os.environ['API_KEY']

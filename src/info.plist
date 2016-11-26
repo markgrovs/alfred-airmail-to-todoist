@@ -61,23 +61,37 @@
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>lastpathcomponent</key>
+				<key>action</key>
+				<integer>0</integer>
+				<key>argument</key>
+				<integer>0</integer>
+				<key>focusedappvariable</key>
 				<false/>
-				<key>onlyshowifquerypopulated</key>
+				<key>focusedappvariablename</key>
+				<string></string>
+				<key>hotkey</key>
+				<integer>0</integer>
+				<key>hotmod</key>
+				<integer>0</integer>
+				<key>hotstring</key>
+				<string></string>
+				<key>leftcursor</key>
 				<false/>
-				<key>removeextension</key>
-				<false/>
-				<key>text</key>
-				<string>{query}</string>
-				<key>title</key>
-				<string>New Todoist Task Created</string>
+				<key>modsmode</key>
+				<integer>0</integer>
+				<key>relatedApps</key>
+				<array>
+					<string>it.bloop.airmail2</string>
+				</array>
+				<key>relatedAppsMode</key>
+				<integer>1</integer>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.output.notification</string>
+			<string>alfred.workflow.trigger.hotkey</string>
 			<key>uid</key>
-			<string>CBDF6D7F-F23B-4094-AD35-4F0558069274</string>
+			<string>FFF92AAB-3640-4E69-8A95-D0B99310FF3B</string>
 			<key>version</key>
-			<integer>1</integer>
+			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -126,37 +140,23 @@
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>action</key>
-				<integer>0</integer>
-				<key>argument</key>
-				<integer>0</integer>
-				<key>focusedappvariable</key>
+				<key>lastpathcomponent</key>
 				<false/>
-				<key>focusedappvariablename</key>
-				<string></string>
-				<key>hotkey</key>
-				<integer>0</integer>
-				<key>hotmod</key>
-				<integer>0</integer>
-				<key>hotstring</key>
-				<string></string>
-				<key>leftcursor</key>
+				<key>onlyshowifquerypopulated</key>
 				<false/>
-				<key>modsmode</key>
-				<integer>0</integer>
-				<key>relatedApps</key>
-				<array>
-					<string>it.bloop.airmail2</string>
-				</array>
-				<key>relatedAppsMode</key>
-				<integer>1</integer>
+				<key>removeextension</key>
+				<false/>
+				<key>text</key>
+				<string>{query}</string>
+				<key>title</key>
+				<string>New Todoist Task Created</string>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.trigger.hotkey</string>
+			<string>alfred.workflow.output.notification</string>
 			<key>uid</key>
-			<string>FFF92AAB-3640-4E69-8A95-D0B99310FF3B</string>
+			<string>CBDF6D7F-F23B-4094-AD35-4F0558069274</string>
 			<key>version</key>
-			<integer>2</integer>
+			<integer>1</integer>
 		</dict>
 	</array>
 	<key>readme</key>
@@ -168,21 +168,21 @@
 			<key>xpos</key>
 			<integer>300</integer>
 			<key>ypos</key>
-			<real>20</real>
+			<integer>70</integer>
 		</dict>
 		<key>59DDAD82-6166-44BD-9DA5-E897A8E67261</key>
 		<dict>
 			<key>xpos</key>
-			<integer>500</integer>
+			<integer>520</integer>
 			<key>ypos</key>
-			<integer>30</integer>
+			<integer>100</integer>
 		</dict>
 		<key>CBDF6D7F-F23B-4094-AD35-4F0558069274</key>
 		<dict>
 			<key>xpos</key>
-			<integer>700</integer>
+			<integer>770</integer>
 			<key>ypos</key>
-			<real>10</real>
+			<integer>110</integer>
 		</dict>
 		<key>FFF92AAB-3640-4E69-8A95-D0B99310FF3B</key>
 		<dict>
