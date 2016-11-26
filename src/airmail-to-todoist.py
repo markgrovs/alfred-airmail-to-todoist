@@ -7,19 +7,9 @@
 
 import sys
 import os
-import inspect
-
-cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"lib")))
-if cmd_subfolder not in sys.path:
-    sys.path.insert(0, cmd_subfolder)
-
-from lib import todoist
-
-# from todoist import TodoistAPI
+from workflow import Workflow3
 from Foundation import *
 from ScriptingBridge import *
-
-from workflow import Workflow3
 
 LOG = None
 API_KEY = None
@@ -34,9 +24,6 @@ def create_task(content):
         todo.sync()
         inbox = [p for p in todo.state['projects'] if p['name'] == 'Inbox'][0]
         wf.settings['inbox_id'] = inbox['id']
-
-    # LOG.debug(wf.settings['inbox_id'])
-
 
     task = todo.items.add(content, wf.settings['inbox_id'])
     # print task
@@ -66,6 +53,7 @@ def main(wf):
 
 if __name__ == u"__main__":
     wf = Workflow3(libraries=['./lib'])
+    import todoist
     LOG = wf.logger
     API_KEY = os.environ['API_KEY']
 
