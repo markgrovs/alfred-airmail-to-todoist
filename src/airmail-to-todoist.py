@@ -28,7 +28,9 @@ def create_task(content):
     task = todo.items.add(content, wf.settings['inbox_id'])
     # print task
 
-    airmail = SBApplication.applicationWithBundleIdentifier_("it.bloop.airmail2")
+    # airmail = SBApplication.applicationWithBundleIdentifier_("it.bloop.airmail2")
+    # 
+    airmail = SBApplication.applicationWithBundleIdentifier_("it.bloop.airmail.beta11")
 
     # Format note text from message subject
     task_note_text = airmail.selectedMessageUrl() + " (" + airmail.selectedMessage().subject() + ")"
